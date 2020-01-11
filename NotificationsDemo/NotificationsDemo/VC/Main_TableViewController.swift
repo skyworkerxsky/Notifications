@@ -10,6 +10,8 @@ import UIKit
 
 class Main_TableViewController: UITableViewController {
     
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     let arrayTitle = [
         "Local Notification",
         "Local Notification with Action",
@@ -42,6 +44,26 @@ class Main_TableViewController: UITableViewController {
         cell.textLabel?.text = arrayTitle[indexPath.row]
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.textLabel?.textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        
+        let notificationType = arrayTitle[indexPath.row]
+        
+        let alertVC = UIAlertController(title: notificationType, message: "After 5 seconds \(notificationType) will appear", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default) { [unowned self] (action) in
+            self.appDelegate?.scheduleNotificaion(notificationType: notificationType)
+        }
+        
+        alertVC.addAction(okAction)
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.textLabel?.textColor = .black
     }
     
     
