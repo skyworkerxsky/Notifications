@@ -56,10 +56,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func scheduleNotificaion(notificationType: String) {
         
         let content = UNMutableNotificationContent()
+        let userActions = "User Actions" // id для категории действий
+        
         content.title = notificationType
         content.body = "This is example how to create \(notificationType)"
         content.sound = UNNotificationSound.default
         content.badge = 1
+        // вкл. созданные действия в центре уведомлений
+        content.categoryIdentifier = userActions
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
@@ -71,6 +75,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // Создаем действия для уведомления
+        let snoozeAction = UNNotificationAction(identifier: "snooze", title: "Отложить", options: [])
+        let deleteAction = UNNotificationAction(identifier: "delete", title: "Удалить", options: [.destructive])
+        
+        // создали категории для действий
+        let category = UNNotificationCategory(identifier: userActions,
+                                              actions: [snoozeAction, deleteAction],
+                                              intentIdentifiers: [],
+                                              options: [])
+        
+        // регистрируем созданую категорию в центре уведомлений
+        notificationCenter.setNotificationCategories([category])
     }
     
 }
@@ -97,6 +113,21 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         // обработка уведомления по id
         if response.notification.request.identifier == "Local Notification" {
             print("Handling notification with the local notificaion identifire")
+        }
+        
+        // обработка действий
+        switch response.actionIdentifier {
+        case UNNotificationDismissActionIdentifier: // отклонение уведомления из центра уведомлений
+        print("Dismiss Action")
+        case UNNotificationDefaultActionIdentifier: // когда пользователь просто тапнул по уведомлению и открыл приложение
+            print("Default")
+        case "snooze":
+            print("Отложить")
+            scheduleNotificaion(notificationType: "Reminder")
+        case "delete":
+            print("Удалить")
+        default:
+            print("Unknown action")
         }
         
         completionHandler()
