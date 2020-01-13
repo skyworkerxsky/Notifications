@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         requestAuthorization()
-        
+        notificationCenter.delegate = self
         return true
     }
     
@@ -73,6 +73,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+}
+
+// MARK: - Extension
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
     
+    // Теперь уведомления срабатывают когда приложение находится на переднем плане
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Срабатывает при открытом приложении alert, sound
+        completionHandler([.alert, .sound])
+    }
+    
+    //
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        // обработка уведомления по id
+        if response.notification.request.identifier == "Local Notification" {
+            print("Handling notification with the local notificaion identifire")
+        }
+        
+        completionHandler()
+    }
 }
 

@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
+        // Убираем badge с кол-вом уведомлений на иконке при запуске приложения
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
