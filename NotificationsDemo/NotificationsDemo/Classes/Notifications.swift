@@ -43,6 +43,16 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         // вкл. созданные действия в центре уведомлений
         content.categoryIdentifier = userActions
         
+        // добавляем изображене к уведомлению
+        guard let path = Bundle.main.path(forResource: "gift-box", ofType: "png") else {return}
+        let url = URL(fileURLWithPath: path)
+        do {
+            let attachment = try UNNotificationAttachment(identifier: "gift-box", url: url, options: nil)
+            content.attachments = [attachment]
+        } catch let error {
+            print("Error attachment", error)
+        }
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         let identifie = "Local Notification"

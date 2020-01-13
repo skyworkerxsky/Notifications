@@ -14,6 +14,7 @@
 		7C4243B423C9D0B500FB1802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4243B323C9D0B500FB1802 /* Assets.xcassets */; };
 		7C4243B723C9D0B500FB1802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4243B523C9D0B500FB1802 /* LaunchScreen.storyboard */; };
 		7C4243C123C9D35500FB1802 /* Main_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4243C023C9D35500FB1802 /* Main_TableViewController.swift */; };
+		7C57979123CC9FCE009F76D7 /* gift-box.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C57979023CC9FCE009F76D7 /* gift-box.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7C4243B623C9D0B500FB1802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4243B823C9D0B500FB1802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C4243C023C9D35500FB1802 /* Main_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_TableViewController.swift; sourceTree = "<group>"; };
+		7C57979023CC9FCE009F76D7 /* gift-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gift-box.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				7C4243AA23C9D0B100FB1802 /* AppDelegate.swift */,
 				7C4243AC23C9D0B100FB1802 /* SceneDelegate.swift */,
 				7C4243B023C9D0B100FB1802 /* Main.storyboard */,
+				7C57979023CC9FCE009F76D7 /* gift-box.png */,
 				7C4243B323C9D0B500FB1802 /* Assets.xcassets */,
 				7C4243B523C9D0B500FB1802 /* LaunchScreen.storyboard */,
 				7C4243B823C9D0B500FB1802 /* Info.plist */,
@@ -147,6 +150,7 @@
 				7C4243B723C9D0B500FB1802 /* LaunchScreen.storyboard in Resources */,
 				7C4243B423C9D0B500FB1802 /* Assets.xcassets in Resources */,
 				7C4243B223C9D0B100FB1802 /* Main.storyboard in Resources */,
+				7C57979123CC9FCE009F76D7 /* gift-box.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
