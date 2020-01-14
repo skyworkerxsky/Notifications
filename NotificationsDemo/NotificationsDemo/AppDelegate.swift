@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         notifications.requestAuthorization()
         notifications.notificationCenter.delegate = notifications
+        
+        // connect Firebase
+        FirebaseApp.configure()
+        
         return true
     }
     

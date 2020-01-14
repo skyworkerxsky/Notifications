@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17229AD592172EBAA4DF223A /* Pods_NotificationsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7186BDCA8CFC6C5F4F65F0 /* Pods_NotificationsDemo.framework */; };
 		7C1EA51223CC9D3600A4E6B4 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EA51123CC9D3600A4E6B4 /* Notifications.swift */; };
+		7C2D99A023CDE0AC007DA2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D999F23CDE0AC007DA2EE /* GoogleService-Info.plist */; };
 		7C4243AB23C9D0B100FB1802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4243AA23C9D0B100FB1802 /* AppDelegate.swift */; };
 		7C4243AD23C9D0B100FB1802 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4243AC23C9D0B100FB1802 /* SceneDelegate.swift */; };
 		7C4243B223C9D0B100FB1802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4243B023C9D0B100FB1802 /* Main.storyboard */; };
@@ -18,7 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01BAF8EC53A3DAD95FDEC766 /* Pods-NotificationsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationsDemo.release.xcconfig"; path = "Target Support Files/Pods-NotificationsDemo/Pods-NotificationsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		46D95255EDA848D0CDC71330 /* Pods-NotificationsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationsDemo.debug.xcconfig"; path = "Target Support Files/Pods-NotificationsDemo/Pods-NotificationsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7C1EA51123CC9D3600A4E6B4 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		7C2D999F23CDE0AC007DA2EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C4243A723C9D0B100FB1802 /* NotificationsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4243AA23C9D0B100FB1802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C4243AC23C9D0B100FB1802 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		7C4243B823C9D0B500FB1802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C4243C023C9D35500FB1802 /* Main_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_TableViewController.swift; sourceTree = "<group>"; };
 		7C57979023CC9FCE009F76D7 /* gift-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gift-box.png"; sourceTree = "<group>"; };
+		DF7186BDCA8CFC6C5F4F65F0 /* Pods_NotificationsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17229AD592172EBAA4DF223A /* Pods_NotificationsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				7C4243A923C9D0B100FB1802 /* NotificationsDemo */,
 				7C4243A823C9D0B100FB1802 /* Products */,
+				BB11819E38BE36EE3BAA3479 /* Pods */,
+				8C3EFCA368C4B4B19246529B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +86,7 @@
 				7C4243B323C9D0B500FB1802 /* Assets.xcassets */,
 				7C4243B523C9D0B500FB1802 /* LaunchScreen.storyboard */,
 				7C4243B823C9D0B500FB1802 /* Info.plist */,
+				7C2D999F23CDE0AC007DA2EE /* GoogleService-Info.plist */,
 			);
 			path = NotificationsDemo;
 			sourceTree = "<group>";
@@ -89,6 +99,24 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		8C3EFCA368C4B4B19246529B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF7186BDCA8CFC6C5F4F65F0 /* Pods_NotificationsDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB11819E38BE36EE3BAA3479 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46D95255EDA848D0CDC71330 /* Pods-NotificationsDemo.debug.xcconfig */,
+				01BAF8EC53A3DAD95FDEC766 /* Pods-NotificationsDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C4243BB23C9D0B500FB1802 /* Build configuration list for PBXNativeTarget "NotificationsDemo" */;
 			buildPhases = (
+				F90E17E65D49C44571E8EBF9 /* [CP] Check Pods Manifest.lock */,
 				7C4243A323C9D0B100FB1802 /* Sources */,
 				7C4243A423C9D0B100FB1802 /* Frameworks */,
 				7C4243A523C9D0B100FB1802 /* Resources */,
+				B762F2D28AC85F54E5DF0258 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,12 +179,55 @@
 			files = (
 				7C4243B723C9D0B500FB1802 /* LaunchScreen.storyboard in Resources */,
 				7C4243B423C9D0B500FB1802 /* Assets.xcassets in Resources */,
+				7C2D99A023CDE0AC007DA2EE /* GoogleService-Info.plist in Resources */,
 				7C4243B223C9D0B100FB1802 /* Main.storyboard in Resources */,
 				7C57979123CC9FCE009F76D7 /* gift-box.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B762F2D28AC85F54E5DF0258 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotificationsDemo/Pods-NotificationsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotificationsDemo/Pods-NotificationsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotificationsDemo/Pods-NotificationsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F90E17E65D49C44571E8EBF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C4243A323C9D0B100FB1802 /* Sources */ = {
@@ -306,6 +379,7 @@
 		};
 		7C4243BC23C9D0B500FB1802 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46D95255EDA848D0CDC71330 /* Pods-NotificationsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -325,6 +399,7 @@
 		};
 		7C4243BD23C9D0B500FB1802 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01BAF8EC53A3DAD95FDEC766 /* Pods-NotificationsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
